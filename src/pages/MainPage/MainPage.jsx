@@ -1,3 +1,4 @@
+import Header from "../../Widgets/header/ui/Header"
 
 
 const MainPage = () => {
@@ -5,7 +6,7 @@ const MainPage = () => {
     return(
         <>
             <div>
-                <h1>Main</h1>
+                <Header/>
             </div>
         </>
     )
