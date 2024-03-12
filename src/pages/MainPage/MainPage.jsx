@@ -1,3 +1,4 @@
+import ListOfCoins from "../../Widgets/ListOfCoins/ListOfCoins"
 import WelcomeCard from "../../Widgets/WelcomeCard/WelcomeCard"
 import Header from "../../Widgets/header/Header"
 import styles from "./MainPage.module.css"
@@ -12,6 +13,7 @@ const MainPage = () => {
             </div>
             <div className={styles.wrapper}>
                 <WelcomeCard/>
+                <ListOfCoins/>
             </div>
         </>
     )

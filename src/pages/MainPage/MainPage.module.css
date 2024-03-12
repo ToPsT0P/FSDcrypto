@@ -1,17 +1,17 @@
 
 .wrapper{
-    width: 1354px;
+    width: 1350px;
     height: fit-content;
 }
 
 
-@media(max-width: 1270px){
+@media(max-width: 1380px){
     .wrapper{
         width: 960px;
     }
 }
 
-@media(max-width: 940px){
+@media(max-width: 990px){
     .wrapper{
        width: 614px; 
     }
