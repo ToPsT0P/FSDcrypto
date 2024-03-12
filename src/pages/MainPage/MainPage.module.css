@@ -1,0 +1,26 @@
+
+.wrapper{
+    width: 1354px;
+    height: fit-content;
+}
+
+
+@media(max-width: 1270px){
+    .wrapper{
+        width: 960px;
+    }
+}
+
+@media(max-width: 940px){
+    .wrapper{
+       width: 614px; 
+    }
+}
+
+.fullWidth{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}

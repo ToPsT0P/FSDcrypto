@@ -1,12 +1,17 @@
-import Header from "../../Widgets/header/ui/Header"
-
+import WelcomeCard from "../../Widgets/WelcomeCard/WelcomeCard"
+import Header from "../../Widgets/header/Header"
+import styles from "./MainPage.module.css"
 
 const MainPage = () => {
 
     return(
+
         <>
-            <div>
+            <div className={styles.fullWidth}>
                 <Header/>
+            </div>
+            <div className={styles.wrapper}>
+                <WelcomeCard/>
             </div>
         </>
     )
