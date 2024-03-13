@@ -2,6 +2,7 @@
 .wrapper{
     width: 1350px;
     height: fit-content;
+
 }
 
 
@@ -13,7 +14,11 @@
 
 @media(max-width: 990px){
     .wrapper{
-       width: 614px; 
+       max-width: 614px;
+       width: 95%;
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
     }
 }
 

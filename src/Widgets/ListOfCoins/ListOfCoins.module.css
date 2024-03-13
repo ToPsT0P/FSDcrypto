@@ -11,37 +11,5 @@
     justify-content: space-between;
     height: fit-content;
     margin-top: 20px;
-    width: 90%;
-    margin-left: 5%;
-}
-
-.coin{
- width: 450px;
- border-radius: 19px;
- border: 1px solid #6060607d;
- height: 70px;
- display: flex;
- flex-wrap: nowrap;
- padding: 9px;
-}
-
-.coin img{
-    height: 34px;
-    width: 34px;
-
-}
-
-.leftsideCoin{
-    width: 60%;
-    display: flex;
-    
-}
-
-.leftsideCoinText{
-    margin-left: 5px;
-}
-
-.rightsideCoin{
-    display: flex;
-    flex-wrap: nowrap;
+    width: 95%;
 }

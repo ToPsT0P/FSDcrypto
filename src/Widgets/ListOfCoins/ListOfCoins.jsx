@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from "./ListOfCoins.module.css"
 import testPNG from "../../shared/img/gala.png"
+import CertainCoin from "../../entities/CertainCoin/CertainCoin"
 
 const ListOfCoins = () => {
 
@@ -25,22 +26,9 @@ const ListOfCoins = () => {
             <div className={styles.wrapper}>
                 <span>Trending Coins</span>
                 <div className={styles.coinList}>
-                    <div className={styles.coin}>
-                        <div className={styles.leftsideCoin}>
-                            <img src={testPNG} alt="" />
-                            <div className={styles.leftsideCoinText}>
-                                <span>GALA</span>
-                                <p>GALA</p>
-                            </div>
-                        </div>
-                        <div className={styles.rightsideCoin}>
-                            <div>
-                                <p>Price to bitcoin:</p>
-                                <span>0.0001123</span>
-                            </div>
-                            <img src="" alt="" />
-                        </div>
-                    </div>
+                    <CertainCoin/>   
+                    <CertainCoin/>
+                    <CertainCoin/>
                 </div>
                 
 
