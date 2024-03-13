@@ -1,6 +1,7 @@
 import styles from "./CertainCoin.module.css"
 import testPNG from "../../shared/img/gala.png"
-const CertainCoin = () => {
+
+const CertainCoin = ({imgURL, price, name}) => {
 
     return(
         <>
@@ -8,14 +9,14 @@ const CertainCoin = () => {
                         <div className={styles.leftsideCoin}>
                             <img src={testPNG} alt="" />
                             <div className={styles.leftsideCoinText}>
-                                <span>GALA</span>
-                                <p>GALA</p>
+                                <span>{name}</span>
+                                <p>{name}</p>
                             </div>
                         </div>
                         <div className={styles.rightsideCoin}>
                             <div>
                                 <p>Price to bitcoin:</p>
-                                <span>0.0001123</span>
+                                <span>{price}</span>
                             </div>
                             
                         </div>
