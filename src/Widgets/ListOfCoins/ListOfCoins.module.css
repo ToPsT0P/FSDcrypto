@@ -13,3 +13,8 @@
     margin-top: 20px;
     width: 95%;
 }
+
+.center{
+    display: flex;
+    justify-content: center;
+}

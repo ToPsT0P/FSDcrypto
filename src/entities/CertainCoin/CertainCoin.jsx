@@ -1,5 +1,7 @@
 import styles from "./CertainCoin.module.css"
 import testPNG from "../../shared/img/gala.png"
+import plus from "../../shared/img/plus.svg"
+import plusActive from "../../shared/img/plusActive.svg"
 
 const CertainCoin = ({imgURL, price, name}) => {
 
@@ -14,11 +16,11 @@ const CertainCoin = ({imgURL, price, name}) => {
                             </div>
                         </div>
                         <div className={styles.rightsideCoin}>
-                            <div>
+                            <div className={styles.rightsideCoinText}>
                                 <p>Price to bitcoin:</p>
                                 <span>{price}</span>
                             </div>
-                            
+                           <img className={styles.imgAdd} src={plus}/>
                         </div>
                     </div>
         </>

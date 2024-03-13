@@ -6,7 +6,7 @@
     border: 1px solid #bababa7d;
     height: 70px;
     display: flex;
-    cursor: pointer;
+    cursor: default;
     flex-wrap: nowrap;
     align-items: center;
     padding: 9px;
@@ -38,7 +38,7 @@
    }
    
    .leftsideCoin{
-       width: 60%;
+       width: 45%;
        display: flex;
        
    }
@@ -60,5 +60,17 @@
 
    .rightsideCoin{
        display: flex;
+       width: 65%;
        flex-wrap: nowrap;
    }
+
+.rightsideCoinText{
+    width: 80%;
+}
+
+.imgAdd{
+    cursor: pointer;
+    border: 1px solid rgba(37, 37, 37, 0.26);
+    border-radius: 14px;
+    transition: 1s;
+}

@@ -61,8 +61,10 @@ const ListOfCoins = () => {
         <>
             <div className={styles.wrapper}>
                 <span>Trending Coins</span>
-                <div className={styles.coinList}>
-                    {dataArray.map((item, i) => { return <CertainCoin imgURL={item.imgURL} name={item.name} price={item.price}/>})}
+                <div className={styles.center}>
+                    <div className={styles.coinList}>
+                        {dataArray.map((item, i) => { return <CertainCoin imgURL={item.imgURL} name={item.name} price={item.price}/>})}
+                    </div>
                 </div>
                 
 
