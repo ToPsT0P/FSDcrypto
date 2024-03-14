@@ -1,0 +1,10 @@
+.wrapperModal{
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 8px;
+    position: absolute;
+}
