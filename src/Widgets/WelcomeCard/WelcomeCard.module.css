@@ -9,6 +9,7 @@
     border-radius: 15px;
     padding: 12px;
     margin-top: 22px;
+    z-index: 1;
 }
 
 @media(max-width: 990px){

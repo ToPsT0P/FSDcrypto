@@ -3,23 +3,21 @@ import ListOfCoins from "../../Widgets/ListOfCoins/ListOfCoins"
 import WelcomeCard from "../../Widgets/WelcomeCard/WelcomeCard"
 import Header from "../../Widgets/header/Header"
 import styles from "./MainPage.module.css"
-import AuthModal from "../../features/Auth/AuthModal/AuthModal"
 
-const MainPage = () => {
+const MainPage = ({setIsModal}) => {
 
-    const [isModal, setIsModal] = useState(true)
 
     return(
 
         <>
-            {isModal && <AuthModal />}
             <div className={styles.fullWidth}>
                 <Header/>
             </div>
             <div className={styles.wrapper}>
-                <WelcomeCard/>
+                <WelcomeCard setIsModal={setIsModal}/>
                 <ListOfCoins/>
             </div>
+        
         </>
     )
 }

@@ -61,11 +61,14 @@
    .rightsideCoin{
        display: flex;
        width: 65%;
+       align-items: center;
        flex-wrap: nowrap;
    }
 
 .rightsideCoinText{
     width: 80%;
+    align-items: center;
+    text-align: center;
 }
 
 .imgAdd{
@@ -75,8 +78,7 @@
     transition: 1s;
     position:relative;
     right: 1px;
-    transition: 0.3s;
-    z-index: 100;
+    transition: 0.2s;
 }
 
 .imgAdd:hover{
@@ -85,7 +87,7 @@
 
 .imgAddActive{
     position:relative;
-    right: 36.6px;
+    left: 34.6px;
     cursor: pointer;
     border: 1px solid rgba(37, 37, 37, 0.26);
     border-radius: 14px;

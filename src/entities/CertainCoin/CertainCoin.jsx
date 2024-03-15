@@ -20,8 +20,8 @@ const CertainCoin = ({imgURL, price, name}) => {
                                 <p>Price to bitcoin:</p>
                                 <span>{price}</span>
                             </div>
-                        <img src={plus} className={styles.imgAdd}/>
                         <img src={plusActive} className={styles.imgAddActive}/>
+                        <img src={plus} className={styles.imgAdd}/>
                         </div>
                     </div>
         </>
