@@ -6,7 +6,7 @@ import AuthModal from "../features/Auth/AuthModal/AuthModal"
 
 function App() {
 
-  const [isModal, setIsModal] = useState("Auth")
+  const [isModal, setIsModal] = useState("None")
 
   return (
     <div className={styles.wrapper}>

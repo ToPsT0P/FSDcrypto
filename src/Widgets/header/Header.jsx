@@ -1,7 +1,6 @@
 import styles from "./Header.module.css"
 
-const Header = () => {
-
+const Header = ({setIsModal}) => {
 
     return(
         <>
@@ -11,7 +10,7 @@ const Header = () => {
                         <a className={styles.brandName} href="">CryptoWatch</a>
                     </span>
 
-                    <button className={styles.loginButton}>Вход</button>
+                    <button className={styles.loginButton} onClick={() => {setIsModal("Login")}}>Вход</button>
 
                 </div>
             </div>

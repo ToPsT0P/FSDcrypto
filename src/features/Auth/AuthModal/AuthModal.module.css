@@ -1,11 +1,19 @@
+*{
+    font-family: "Helvetica Neue",Arial,sans-serif;
+
+}
+
 
 .wrapper{
     width: 100%;
     height: 100%;
     display: flex;
+    overflow: hidden;
     position: fixed;
-    background: rgba(0,0,0,0.4);
+    /* background: rgba(0,0,0,0.4); */
     top: 0;
+    backdrop-filter: blur(5px);
+    z-index: 3;
     left: 0;
     display: flex;
     justify-content: center;
@@ -15,10 +23,101 @@
     pointer-events:all;
 }
 
-/* .wrapper.active{
-    opacity: 1;
+.textsField{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    p{
+        font-size: medium;
+        color: rgba(0, 0, 0, 0.769);
+    }
+}
 
-} */
+.textsField span{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.769);
+    font-size: large
+}
+
+.inputsField{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    input{
+        border: 0px;
+        width: 81%;
+        color: black;
+        font-family: "Helvetica Neue",Arial,sans-serif;
+        font-size:17px;
+        outline: none;
+        padding-left: 10px;
+        height: 100%;
+    }
+}
+
+.buttonsField{
+    width: 95%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    justify-content: end;
+
+
+}
+
+.buttonsField     button{
+    margin-left: 10px;
+    height: 40px;
+    border-radius: 12px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:auto;
+    cursor: pointer;
+    border: 0px;
+    color: white;
+    background-color: #17C964;
+}
+
+.inputDiv img{
+    width: 15px;
+    margin-left: 9px;
+    margin-right: 9px;
+    height: 12px;
+}
+
+.inputDivError{
+    width: 90%;
+    margin-bottom: 25px;
+
+}
+
+.inputDiv{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 25px;
+    height: 45px;
+    border: 2px solid rgba(0, 0, 0, 0.121);
+    border-radius: 12px;
+
+    input{
+        background-color: white;
+        background: white;
+    }
+}
+
+.errorText{
+    color: rgb(242, 0, 0);
+}
 
 .modalWrapper{
     padding: 20px;
@@ -28,6 +127,7 @@
     min-width: 340px;
     max-width: 350px;
     z-index: 123215;
+    box-shadow: 1px 1px 100px 2px rgba(0, 0, 0, 0.493);
     pointer-events: all;
     height: fit-content;
 }

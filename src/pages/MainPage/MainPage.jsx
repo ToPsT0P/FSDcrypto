@@ -11,7 +11,7 @@ const MainPage = ({setIsModal}) => {
 
         <>
             <div className={styles.fullWidth}>
-                <Header/>
+                <Header setIsModal={setIsModal}/>
             </div>
             <div className={styles.wrapper}>
                 <WelcomeCard setIsModal={setIsModal}/>

@@ -1,28 +1,58 @@
-import { useState } from "react"
-import styles from "./ListOfCoins.module.css"
-import testPNG from "../../shared/img/gala.png"
-import CertainCoin from "../../entities/CertainCoin/CertainCoin"
+import React, { useEffect, useMemo, useState } from "react";
+import styles from "./ListOfCoins.module.css";
+import CertainCoin from "../../entities/CertainCoin/CertainCoin";
 
 const ListOfCoins = () => {
-
     const [dataArray, setDataArray] = useState([
         {
-           price: 9.875,
-           name: "GALA",
-           imgURL: "gala"
-
-        },
-        {
-            price: 6.9876,
-            name:"kimbo",
-            imgURL: "gala.png"
-        },
-        {
-            price:4.1623,
-            name: "DeepFakeAI",
-            imgURL: "gala.png",
-        },
-        {
+            price: 9.875,
+            name: "GALA",
+            imgURL: "gala"
+ 
+         },
+         {
+             price: 6.9876,
+             name:"kimbo",
+             imgURL: "gala.png"
+         },
+         {
+             price:4.1623,
+             name: "DeepFakeAI",
+             imgURL: "gala.png",
+         },
+         {
+             price: 9.875,
+             name: "GALA",
+             imgURL: "gala.png"
+  
+          },
+          {
+              price: 6.9876,
+              name:"kimbo",
+              imgURL: "gala.png"
+          },
+          {
+              price:4.1623,
+              name: "DeepFakeAI",
+              imgURL: "gala.png",
+          },
+          {
+             price: 9.875,
+             name: "GALA",
+             imgURL: "gala.png"
+  
+          },
+          {
+              price: 6.9876,
+              name:"kimbo",
+              imgURL: "gala.png"
+          },
+          {
+              price:4.1623,
+              name: "DeepFakeAI",
+              imgURL: "gala.png",
+          },
+          {
             price: 9.875,
             name: "GALA",
             imgURL: "gala.png"
@@ -38,39 +68,26 @@ const ListOfCoins = () => {
              name: "DeepFakeAI",
              imgURL: "gala.png",
          },
-         {
-            price: 9.875,
-            name: "GALA",
-            imgURL: "gala.png"
- 
-         },
-         {
-             price: 6.9876,
-             name:"kimbo",
-             imgURL: "gala.png"
-         },
-         {
-             price:4.1623,
-             name: "DeepFakeAI",
-             imgURL: "gala.png",
-         },
+    ]);
 
-    ])
+    const coinElements = useMemo(() => {
+        return dataArray.map((item, i) => (
+            <CertainCoin key={i} imgURL={item.imgURL} name={item.name} price={item.price} />
+        ));
+    }, [dataArray]);
 
-    return(
+    return (
         <>
             <div className={styles.wrapper}>
                 <span>Trending Coins</span>
                 <div className={styles.center}>
                     <div className={styles.coinList}>
-                        {dataArray.map((item, i) => { return <CertainCoin imgURL={item.imgURL} name={item.name} price={item.price}/>})}
+                        {coinElements}
                     </div>
                 </div>
-                
-
             </div>
         </>
-    )
-}
+    );
+};
 
-export default ListOfCoins
+export default ListOfCoins;
