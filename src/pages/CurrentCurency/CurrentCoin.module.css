@@ -1,0 +1,42 @@
+/* *{
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}    */
+
+.wrapper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.exitText{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #0072F5;
+}
+
+.name{
+    font-size: x-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.dataWrapper{
+    display: flex;
+    justify-self: center;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.coinData{
+    margin-top: 20px;
+    width: 400px;
+    height: 280px;
+    box-shadow: 21px 221px 222px 22px black;
+}
