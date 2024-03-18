@@ -8,6 +8,8 @@ function App() {
 
   const [isModal, setIsModal] = useState("None")
 
+  
+
   return (
     <div className={styles.wrapper}>
        <MainPage setIsModal={setIsModal}/>
