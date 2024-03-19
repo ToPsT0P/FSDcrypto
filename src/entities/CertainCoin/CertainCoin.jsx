@@ -2,12 +2,13 @@ import styles from "./CertainCoin.module.css"
 import testPNG from "../../shared/img/gala.png"
 import plus from "../../shared/img/plus.svg"
 import plusActive from "../../shared/img/plusActive.svg"
+import { Link } from "react-router-dom"
 
-const CertainCoin = ({imgURL, price, name}) => {
+const CertainCoin = ({imgURL, price, name, item, setItem}) => {
 
     return(
         <>
-            <div className={styles.coin}>
+            <Link to={"/coin"} onClick={() => setItem(item)} className={styles.coin}>
                         <div className={styles.leftsideCoin}>
                             <img src={testPNG} alt="" />
                             <div className={styles.leftsideCoinText}>
@@ -23,7 +24,7 @@ const CertainCoin = ({imgURL, price, name}) => {
                         <img src={plusActive} className={styles.imgAddActive}/>
                         <img src={plus} className={styles.imgAdd}/>
                         </div>
-                    </div>
+                    </Link>
         </>
     )
 }

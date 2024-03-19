@@ -8,15 +8,15 @@ import CurrentCoin from '../pages/CurrentCurency/CurrentCoin'
 function App() {
 
   const [isModal, setIsModal] = useState("None")
-
+  const [item, setItem] = useState()
 
   return (
     <div className={styles.wrapper}>
        {isModal == "Auth" && <AuthModal isModal={isModal} setIsModal={setIsModal}/>}
        {isModal == "Login" && <AuthModal isModal={isModal} setIsModal={setIsModal}/>}
        <Routes>
-        <Route path="/" element={<MainPage setIsModal={setIsModal}/>} />
-        <Route path="/Coin" element={<CurrentCoin/>} />
+        <Route path="/" element={<MainPage setItem={setItem} setIsModal={setIsModal}/>} />
+        <Route path="/Coin" element={<CurrentCoin item={item}/>} />
        </Routes>
     </div>
   )

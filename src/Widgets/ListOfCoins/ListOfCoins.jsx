@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./ListOfCoins.module.css";
 import CertainCoin from "../../entities/CertainCoin/CertainCoin";
 
-const ListOfCoins = () => {
+const ListOfCoins = ({setItem}) => {
     const [dataArray, setDataArray] = useState([
         {
             price: 9.875,
@@ -72,7 +72,7 @@ const ListOfCoins = () => {
 
     const coinElements = useMemo(() => {
         return dataArray.map((item, i) => (
-            <CertainCoin key={i} imgURL={item.imgURL} name={item.name} price={item.price} />
+            <CertainCoin setItem={setItem} key={i} item={item} imgURL={item.imgURL} name={item.name} price={item.price} />
         ));
     }, [dataArray]);
 

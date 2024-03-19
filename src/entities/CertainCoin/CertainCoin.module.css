@@ -6,6 +6,7 @@
     border: 1px solid #bababa7d;
     height: 70px;
     display: flex;
+    color: black;
     cursor: default;
     flex-wrap: nowrap;
     align-items: center;

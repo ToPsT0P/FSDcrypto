@@ -36,7 +36,40 @@
 
 .coinData{
     margin-top: 20px;
-    width: 400px;
+    width: 100%;
+}
+
+.wrapperMain{
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.certainCoin{
+    width: 350px;
     height: 280px;
-    box-shadow: 21px 221px 222px 22px black;
+    border-radius: 16px;
+    margin-right: 20px;
+    padding: 12px;
+    border: 0px;
+    box-shadow: -5px 2px 35px 1px rgba(80, 80, 80, 0.142);
+}
+
+.coinStats{
+    background-color: rgb(255, 0, 0);
+    width: 600px;
+    height: 400px;
+    border: 0px;
+    border-radius: 16px;
+    
+}
+
+.bottomCertainCoin{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.231);
+    height: 60px;
+    border-radius: 12px;
 }
