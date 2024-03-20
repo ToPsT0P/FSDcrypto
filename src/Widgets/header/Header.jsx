@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styles from "./Header.module.css"
 
 const Header = ({setIsModal}) => {
@@ -7,7 +8,7 @@ const Header = ({setIsModal}) => {
             <div className={styles.wrapper}>
                 <div className={styles.items}>
                     <span>
-                        <a className={styles.brandName} href="">CryptoWatch</a>
+                        <Link to={"/"} className={styles.brandName}>CryptoWatch</Link>
                     </span>
 
                     <button className={styles.loginButton} onClick={() => {setIsModal("Login")}}>Вход</button>

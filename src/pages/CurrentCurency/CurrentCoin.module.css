@@ -49,8 +49,8 @@
 }
 
 .certainCoin{
-    width: 350px;
-    height: 280px;
+    width: 400px;
+    height: 276px;
     border-radius: 16px;
     margin-right: 20px;
     padding: 12px;
@@ -70,6 +70,88 @@
 .bottomCertainCoin{
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.231);
-    height: 60px;
+    height: 80px;
     border-radius: 12px;
+}
+
+.topCertainCoin img{
+    width: 40px;
+    border-radius: 6px;
+    margin-right: 10px;
+    height: 40px;
+}
+
+.topCertainCoin{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 105px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.topCeratinCoinLeft{
+    display: flex;
+    width: 170px;
+    max-width: 170px;
+    font-size: larger;
+    text-align: center;
+    text-align: center;
+}
+
+.likeButton{
+    width: 40px;
+    height: 40px;
+
+}
+
+.centralCertainCoin{
+    p{
+        color: rgb(143, 137, 180);
+        font-size: large;
+        font-weight: 600;
+    }
+    span{
+        font-size: large;
+        font-weight: bold;
+    }
+
+}
+
+.centralCertainCoin{
+    height: 80px;
+}
+
+.bottomCertainCoin{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 7px;
+}
+
+.bottomCertainCoinLeft{
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+
+    span{
+        color: rgb(143, 137, 180);
+
+    }
+}
+
+.bottomCertainCoinRight{
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span{
+        color: rgb(143, 137, 180);
+
+    }
 }

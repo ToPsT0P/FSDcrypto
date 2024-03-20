@@ -7,66 +7,78 @@ const ListOfCoins = ({setItem}) => {
         {
             price: 9.875,
             name: "GALA",
-            imgURL: "gala"
+            imgURL: "gala",
+            cap: 4.6,
+            currentMarket: 21002030,
+            volume: 87654213,
  
          },
          {
              price: 6.9876,
              name:"kimbo",
-             imgURL: "gala.png"
-         },
-         {
-             price:4.1623,
-             name: "DeepFakeAI",
              imgURL: "gala.png",
+             cap: 4.6,
+             currentMarket: 21002030,
+             volume: 87654213,
          },
          {
-             price: 9.875,
-             name: "GALA",
-             imgURL: "gala.png"
-  
-          },
-          {
-              price: 6.9876,
-              name:"kimbo",
-              imgURL: "gala.png"
-          },
-          {
-              price:4.1623,
-              name: "DeepFakeAI",
-              imgURL: "gala.png",
-          },
-          {
-             price: 9.875,
-             name: "GALA",
-             imgURL: "gala.png"
-  
-          },
-          {
-              price: 6.9876,
-              name:"kimbo",
-              imgURL: "gala.png"
-          },
-          {
-              price:4.1623,
-              name: "DeepFakeAI",
-              imgURL: "gala.png",
-          },
-          {
             price: 9.875,
             name: "GALA",
-            imgURL: "gala.png"
+            imgURL: "gala",
+            cap: 4.6,
+            currentMarket: 21002030,
+            volume: 87654213,
  
          },
          {
              price: 6.9876,
              name:"kimbo",
-             imgURL: "gala.png"
+             imgURL: "gala.png",
+             cap: 4.6,
+             currentMarket: 21002030,
+             volume: 87654213,
          },
          {
-             price:4.1623,
-             name: "DeepFakeAI",
+            price: 9.875,
+            name: "GALA",
+            imgURL: "gala",
+            cap: 4.6,
+            currentMarket: 21002030,
+            volume: 87654213,
+ 
+         },
+         {
+             price: 6.9876,
+             name:"kimbo",
              imgURL: "gala.png",
+             cap: 4.6,
+             currentMarket: 21002030,
+             volume: 87654213,
+         },
+         {
+            price: 9.875,
+            name: "GALA",
+            imgURL: "gala",
+            cap: 4.6,
+            currentMarket: 21002030,
+            volume: 87654213,
+ 
+         },
+         {
+             price: 6.9876,
+             name:"kimbo",
+             imgURL: "gala.png",
+             cap: 4.6,
+             currentMarket: 21002030,
+             volume: 87654213,
+         },
+         {
+            price: 9.875,
+            name: "GALA",
+            imgURL: "gala",
+            cap: 4.6,
+            currentMarket: 21002030,
+            volume: 87654213,
          },
     ]);
 
