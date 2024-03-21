@@ -1,4 +1,3 @@
-import { useState } from "react"
 import ListOfCoins from "../../Widgets/ListOfCoins/ListOfCoins"
 import WelcomeCard from "../../Widgets/WelcomeCard/WelcomeCard"
 import Header from "../../Widgets/header/Header"
