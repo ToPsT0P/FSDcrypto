@@ -17,7 +17,7 @@ app.use("/api", router)
 const start = async () => {
     try {
         await mongoose.connect(process.env.DB_URL)
-        app.listen(PORT, () => console.log(`Порт на котором работает = ${PORT}`))
+        app.listen(PORT, () => console.log(`Порт backend = ${PORT}`))
     } catch (error) {
         console.log(error)
     }
