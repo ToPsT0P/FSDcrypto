@@ -6,14 +6,14 @@ import { useState } from "react";
 import imgpng from "../../shared/img/gala.png"
 import { CiStar } from "react-icons/ci";
 
-const CurrentCoin = ({item}) => {
+const CurrentCoin = ({setIsModal, item}) => {
     
     
 
     return(
     
     <div className={styles.wrapper}>
-        <Header/>
+        <Header setIsModal={setIsModal}/>
         <div className={styles.dataWrapper}>
             <Link to={"/"} className={styles.exitText}>
                 <IoIosArrowRoundBack style={{width:"30px", height:"fit-content"}}/>

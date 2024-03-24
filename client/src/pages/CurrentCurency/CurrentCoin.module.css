@@ -52,6 +52,7 @@
     width: 400px;
     height: 276px;
     border-radius: 16px;
+    margin-top: 20px;
     margin-right: 20px;
     padding: 12px;
     border: 0px;
@@ -153,5 +154,23 @@
     span{
         color: rgb(143, 137, 180);
 
+    }
+}
+
+@media(max-width: 1220px){
+    
+
+    
+    .certainCoin{
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    .wrapperMain{
+        display: flex;
+        flex-wrap: wrap;
+
+        .coinStats{
+            margin-bottom: 20px;
+        }
     }
 }

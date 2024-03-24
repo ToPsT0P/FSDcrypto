@@ -1,14 +1,24 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import MainPage from '../pages/MainPage/MainPage'
 import styles from "./absoluteStyles.module.css"
 import AuthModal from "../features/Auth/AuthModal/AuthModal"
 import { Route, Routes } from 'react-router-dom'
 import CurrentCoin from '../pages/CurrentCurency/CurrentCoin'
+import { Context } from '../main'
 
 function App() {
 
   const [isModal, setIsModal] = useState("None")
   const [item, setItem] = useState()
+
+
+  const {store} = useContext(Context)
+  
+  useEffect(() => {
+    if(localStorage.getItem('token')){
+      store.checkAuth()
+    }
+  }, [])
 
   return (
     <div className={styles.wrapper}>
@@ -16,7 +26,7 @@ function App() {
        {isModal == "Login" && <AuthModal isModal={isModal} setIsModal={setIsModal}/>}
        <Routes>
         <Route path="/" element={<MainPage setItem={setItem} setIsModal={setIsModal}/>} />
-        <Route path="/Coin" element={<CurrentCoin item={item}/>} />
+        <Route path="/Coin" element={<CurrentCoin item={item} setIsModal={setIsModal}/>} />
        </Routes>
     </div>
   )

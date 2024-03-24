@@ -13,6 +13,25 @@ class TokenService {
         }
     }
 
+    validateAccessToken(token){
+        try {
+            const userData = jwt.verify(token, procces.env.JWT_ACCESS_SECRET);
+            return userData
+        } catch (e) {
+            return null;
+        }
+    }
+
+    validateRefreshToken(token){
+        try {
+            const userData = jwt.verify(token, procces.env.JWT_REFRESH_SECRET);
+            return userData
+            
+        } catch (e) {
+            return null
+        }
+    }
+
     async saveToken(userId, refreshToken){
         let tokenData = await tokenModel.findOne({user: userId});
         if(!tokenData){
@@ -22,6 +41,16 @@ class TokenService {
             await tokenData.save();
         }
         return tokenData;
+    }
+
+    async removeToken(refreshToken){
+        const tokenData = await tokenModel.deleteOne({refreshToken})
+        return tokenData
+    }
+
+    async findToken(refreshToken){
+        const tokenData = await tokenModel.findOne({refreshToken})
+        return tokenData
     }
 }
 

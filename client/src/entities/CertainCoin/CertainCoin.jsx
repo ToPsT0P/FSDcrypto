@@ -5,6 +5,10 @@ import plusActive from "../../shared/img/plusActive.svg"
 import { Link } from "react-router-dom"
 
 const CertainCoin = ({imgURL, price, name, item, setItem}) => {
+    
+    const addingToFavourite = ({e, item}) =>{
+        
+    }
 
     return(
         <>

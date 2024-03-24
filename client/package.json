@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@vscode/codicons": "^0.0.35",
+    "axios": "^1.6.8",
     "css.gg": "^2.1.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
+    "mobx": "^6.12.1",
+    "mobx-react-lite": "^4.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
