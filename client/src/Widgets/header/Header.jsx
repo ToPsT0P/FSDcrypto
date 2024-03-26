@@ -2,25 +2,21 @@ import { Link } from "react-router-dom"
 import styles from "./Header.module.css"
 import { useContext, useEffect } from "react"
 import { Context } from "../../main"
+import { observer } from "mobx-react-lite"
 
-const   Header = ({setIsModal}) => {
-
-    const {store} = useContext(Context)
-    
-        const logFun = () => {
-            store.logout()
-        }
-    
-        const openModal = () => {
-            setIsModal("Login")
-        }
+const Header = ({ setIsModal }) => {
+    const { store } = useContext(Context)
 
     useEffect(() => {
         store.checkAuth()
-    }, [logFun, openModal])
-    
+    }, [])
 
-    return(
+    const openModal = () => {
+        setIsModal("Login")
+        store.checkAuth()
+    }
+
+    return (
         <>
             <div className={styles.wrapper}>
                 <div className={styles.items}>
@@ -28,12 +24,12 @@ const   Header = ({setIsModal}) => {
                         <Link to={"/"} className={styles.brandName}>CryptoWatch</Link>
                     </span>
 
-                    {store.isAuth == false && <button className={styles.loginButton} onClick={() => {openModal()}}>Вход</button>}
-                    {store.isAuth == true && <button className={styles.loginButton} onClick={() => {logFun()}}>Выход</button>}
+                    {store.isAuth === true && <button className={styles.loginButton} onClick={() => store.logout}>Выход</button>}
+                    {store.isAuth === false && <button className={styles.loginButton} onClick={openModal}>Вход</button>}
                 </div>
             </div>
         </>
     )
 }
 
-export default Header
+export default observer(Header)

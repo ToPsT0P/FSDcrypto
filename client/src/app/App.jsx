@@ -5,6 +5,7 @@ import AuthModal from "../features/Auth/AuthModal/AuthModal"
 import { Route, Routes } from 'react-router-dom'
 import CurrentCoin from '../pages/CurrentCurency/CurrentCoin'
 import { Context } from '../main'
+import { observer } from 'mobx-react-lite'
 
 function App() {
 
@@ -14,11 +15,7 @@ function App() {
 
   const {store} = useContext(Context)
   
-  useEffect(() => {
-    if(localStorage.getItem('token')){
-      store.checkAuth()
-    }
-  }, [])
+
 
   return (
     <div className={styles.wrapper}>
@@ -32,4 +29,4 @@ function App() {
   )
 }
 
-export default App
+export default observer(App)
