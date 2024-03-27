@@ -2,92 +2,18 @@ import { makeAutoObservable } from "mobx";
 
 class CoinsData {
     constructor() {
-        this.coinsArray;
+        this.coinsArray = [];
         makeAutoObservable(this);
         this.dataTake();
     }
 
     async dataTake() {
-        await new Promise((resolve) => {
-                this.coinsArray = [
-                    {
-                        price: 9.875,
-                        name: "GALA",
-                        imgURL: "gala",
-                        cap: 4.6,
-                        currentMarket: 21002030,
-                        volume: 87654213,
-             
-                     },
-                     {
-                         price: 6.9876,
-                         name:"kimbo",
-                         imgURL: "gala.png",
-                         cap: 4.6,
-                         currentMarket: 21002030,
-                         volume: 87654213,
-                     },
-                     {
-                        price: 9.875,
-                        name: "GALA",
-                        imgURL: "gala",
-                        cap: 4.6,
-                        currentMarket: 21002030,
-                        volume: 87654213,
-             
-                     },
-                     {
-                         price: 6.9876,
-                         name:"kimbo",
-                         imgURL: "gala.png",
-                         cap: 4.6,
-                         currentMarket: 21002030,
-                         volume: 87654213,
-                     },
-                     {
-                        price: 9.875,
-                        name: "GALA",
-                        imgURL: "gala",
-                        cap: 4.6,
-                        currentMarket: 21002030,
-                        volume: 87654213,
-             
-                     },
-                     {
-                         price: 6.9876,
-                         name:"kimbo",
-                         imgURL: "gala.png",
-                         cap: 4.6,
-                         currentMarket: 21002030,
-                         volume: 87654213,
-                     },
-                     {
-                        price: 9.875,
-                        name: "GALA",
-                        imgURL: "gala",
-                        cap: 4.6,
-                        currentMarket: 21002030,
-                        volume: 87654213,
-             
-                     },
-                     {
-                         price: 6.9876,
-                         name:"kimbo",
-                         imgURL: "gala.png",
-                         cap: 4.6,
-                         currentMarket: 21002030,
-                         volume: 87654213,
-                     },
-                     {
-                        price: 9.875,
-                        name: "GALA",
-                        imgURL: "gala",
-                        cap: 4.6,
-                        currentMarket: 21002030,
-                        volume: 87654213,
-                     }
-                ];
-        });
+                this.coinsArray = 
+                    [fetch('https://api.coingecko.com/api/v3/coins/list?x_cg_demo_api_key=CG-7RkMX3moi38DckTXKB8DJXY8')
+                    .then(response => response.json())
+                     
+    ];
+
     }
 }
 

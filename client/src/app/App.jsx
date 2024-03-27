@@ -19,7 +19,7 @@ function App() {
        {isModal == "Login" && <AuthModal isModal={isModal} setIsModal={setIsModal}/>}
        <Routes>
         <Route path="/" element={<MainPage setItem={setItem} setIsModal={setIsModal}/>} />
-        <Route path="/Coin" element={<CurrentCoin item={item} setIsModal={setIsModal}/>} />
+        {/* <Route path="/Coin" element={<CurrentCoin item={item} setIsModal={setIsModal}/>} /> */}
        </Routes>
     </div>
   )

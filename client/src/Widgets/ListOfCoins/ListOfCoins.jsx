@@ -7,11 +7,13 @@ const ListOfCoins = ({setItem}) => {
    
     const dataArray = new CoinsData();
     
-    const coinElements = useMemo(() => {
+    useEffect(() => {
         return dataArray.coinsArray.map((item, i) => (
-            <CertainCoin setItem={setItem} key={i} item={item} imgURL={item.imgURL} name={item.name} price={item.price} />
+            console.log(item)
+            // <CertainCoin setItem={setItem} key={i} item={item}  name={item.name} price={item.price} />
         ));
-    }, [dataArray]);
+
+    }, [])
 
     return (
         <>
@@ -19,7 +21,7 @@ const ListOfCoins = ({setItem}) => {
                 <span>Trending Coins</span>
                 <div className={styles.center}>
                     <div className={styles.coinList}>
-                        {coinElements}
+                        {/* {coinElements} */}
                     </div>
                 </div>
             </div>
