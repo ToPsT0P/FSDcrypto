@@ -56,13 +56,14 @@ class Store {
 
     async checkAuth() {
         try {
-            const response = await axios.get(`${API_URL}/refreshToken`, { withCredentials: true })
-            localStorage.setItem('token', response.data.accessToken)
-            this.setAuth(true)
-            this.setUser(response.data.user)
+            const response = await axios.get(`${API_URL}/refreshToken`, {withCredentials: true})
+            console.log(response);
+            localStorage.setItem('token', response.data.accessToken);
+            this.setAuth(true);
+            this.setUser(response.data.user);
         } catch (e) {
-            console.log(e.response?.data?.message)
-        } 
+            console.log(e.response?.data?.message);
+        }
     }
 
     

@@ -11,11 +11,7 @@ function App() {
 
   const [isModal, setIsModal] = useState("None")
   const [item, setItem] = useState()
-
-
   const {store} = useContext(Context)
-  
-
 
   return (
     <div className={styles.wrapper}>
