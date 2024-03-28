@@ -6,12 +6,12 @@ import Store from './app/store/store.js'
 import CoinsData from './app/coinsData/coinsData.js'
 
 const store = new Store();
-const itemsArray = new CoinsData();
+const coinsArray = new CoinsData();
 
 
 export const Context = createContext({
+    coinsArray,
     store,
-    itemsArray
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
