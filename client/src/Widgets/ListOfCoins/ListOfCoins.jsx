@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ListOfCoins.module.css";
 import CoinsData from "../../app/coinsData/coinsData";
+import CertainCoin from "../../entities/CertainCoin/CertainCoin";
 
-const ListOfCoins = ({ setItem }) => {
+const ListOfCoins = () => {
   const [coinsArray, setCoinsArray] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,8 +13,8 @@ const ListOfCoins = ({ setItem }) => {
       await array.dataTake();
       setCoinsArray(array.coinsArray);
     };
-
     fetchData();
+    
   }, []);
 
 
@@ -22,7 +24,11 @@ const ListOfCoins = ({ setItem }) => {
       <div className={styles.wrapper}>
         <span>Trending Coins</span>
         <div className={styles.center}>
-          <div id="coinListId" className={styles.coinList}></div>
+          <div className={styles.coinList}>
+            {coinsArray.map((item, i) => (
+              <CertainCoin key={i} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </>

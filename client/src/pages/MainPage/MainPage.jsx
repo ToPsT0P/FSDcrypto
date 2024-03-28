@@ -5,7 +5,7 @@ import Header from "../../Widgets/header/Header"
 import styles from "./MainPage.module.css"
 
 
-const MainPage = ({setIsModal, setItem}) => {
+const MainPage = ({setIsModal}) => {
 
     return(
 
@@ -16,7 +16,7 @@ const MainPage = ({setIsModal, setItem}) => {
             </div>
             <div className={styles.wrapper}>
                 <WelcomeCard setIsModal={setIsModal}/>
-                <ListOfCoins setItem={setItem}/>
+                <ListOfCoins/>
             </div>
         
         </>

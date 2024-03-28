@@ -4,23 +4,22 @@ import plus from "../../shared/img/plus.svg"
 import plusActive from "../../shared/img/plusActive.svg"
 import { Link } from "react-router-dom"
 
-const CertainCoin = ({name, item, setItem}) => {
-    
+const CertainCoin = ({item}) => {
 
     return(
         <>
-            <Link to={"/coin"} onClick={() => setItem(item)} className={styles.coin}>
+            <Link to={`/coin/${item.id}`}  className={styles.coin}>
                         <div className={styles.leftsideCoin}>
-                            <img src={testPNG} alt="" />
+                            <img src={item.image} alt="" />
                             <div className={styles.leftsideCoinText}>
-                                <span>{name}</span>
-                                <p>{name}</p>
+                                <span>{item.name}</span>
+                                <p>{item.symbol}</p>
                             </div>
                         </div>
                         <div className={styles.rightsideCoin}>
                             <div className={styles.rightsideCoinText}>
                                 <p>Price to bitcoin:</p>
-                                <span>123</span>
+                                <span>{item.current_price}</span>
                             </div>
                         <img src={plusActive} className={styles.imgAddActive}/>
                         <img src={plus} className={styles.imgAdd}/>
