@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import CurrentCoin from '../pages/CurrentCurency/CurrentCoin'
 import { Context } from '../main'
 import { observer } from 'mobx-react-lite'
+import PageNotFound from '../pages/PageNotFound/PageNotFound'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
        <Routes>
         <Route path="/" element={<MainPage setIsModal={setIsModal}/>} />
         <Route path={`/coin/:id`} element={<CurrentCoin setIsModal={setIsModal}/>} />
+        <Route path='*' element={<PageNotFound/>}/>
        </Routes>
     </div>
   )

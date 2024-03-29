@@ -1,5 +1,4 @@
 import styles from "./CertainCoin.module.css"
-import testPNG from "../../shared/img/gala.png"
 import plus from "../../shared/img/plus.svg"
 import plusActive from "../../shared/img/plusActive.svg"
 import { Link } from "react-router-dom"

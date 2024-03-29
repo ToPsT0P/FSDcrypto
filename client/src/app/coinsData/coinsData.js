@@ -5,11 +5,12 @@ class CoinsData {
         this.coinsArray;
         makeAutoObservable(this);
         this.dataTake();
+        this.page = 1;
     }
 
     async dataTake() {
         try {
-            const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&page=12&x_cg_demo_api_key=CG-7RkMX3moi38DckTXKB8DJXY8');
+            const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&per_page=12&page=${this.page}&x_cg_demo_api_key=CG-7RkMX3moi38DckTXKB8DJXY8`);
             if (!response.ok) {
                 throw new Error('Failed to fetch data');
             }
@@ -22,6 +23,11 @@ class CoinsData {
         } catch (error) {
             console.error('Error fetching data:', error);
         }
+    }
+
+    async pageChange(userPage){
+        this.page = userPage
+        console.log(this.page)
     }
     
 }

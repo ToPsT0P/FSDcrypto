@@ -3,7 +3,7 @@ import styles from "./ListOfCoins.module.css";
 import CoinsData from "../../app/coinsData/coinsData";
 import CertainCoin from "../../entities/CertainCoin/CertainCoin";
 
-const ListOfCoins = () => {
+const ListOfCoins = ({paginationFlag}) => {
   const [coinsArray, setCoinsArray] = useState([]);
 
 
@@ -12,10 +12,11 @@ const ListOfCoins = () => {
       const array = new CoinsData();
       await array.dataTake();
       setCoinsArray(array.coinsArray);
+      console.log(array.coinsArray)
     };
     fetchData();
     
-  }, []);
+  }, [paginationFlag]);
 
 
 
