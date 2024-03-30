@@ -10,7 +10,7 @@ import Pagination from "../../Widgets/pagination/Pagination"
 const MainPage = ({setIsModal}) => {
 
     const [paginationFlag, setPaginationFlag] = useState(true)
-
+    const [currectPage, setCurrectPage] = useState(1)
     return(
 
         <>
@@ -20,8 +20,8 @@ const MainPage = ({setIsModal}) => {
             </div>
             <div className={styles.wrapper}>
                 <WelcomeCard setIsModal={setIsModal}/>
-                <ListOfCoins paginationFlag={paginationFlag}/>
-                <Pagination paginationFlag={paginationFlag} setPaginationFlag={setPaginationFlag}/>
+                <ListOfCoins currectPage={currectPage} paginationFlag={paginationFlag}/>
+                <Pagination setCurrectPage={setCurrectPage} paginationFlag={paginationFlag} setPaginationFlag={setPaginationFlag}/>
             </div>
             <div className={styles.paginationDiv}>
             </div>

@@ -3,7 +3,7 @@ import styles from "./Pagination.module.css"
 import CoinsData from '../../app/coinsData/coinsData';
 
 
-function Pagination({setPaginationFlag, paginationFlag}) {
+function Pagination({ setPaginationFlag, paginationFlag, setCurrectPage }) {
 
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,6 +14,7 @@ function Pagination({setPaginationFlag, paginationFlag}) {
   // Функция для обновления текущей страницы
   const goToPage = (page) => {
     setCurrentPage(page);
+    setCurrectPage(currectPage)
     currectPage.pageChange(page)
     setPaginationFlag(!paginationFlag)
   };
@@ -78,3 +79,4 @@ function Pagination({setPaginationFlag, paginationFlag}) {
 }
 
 export default Pagination;
+
