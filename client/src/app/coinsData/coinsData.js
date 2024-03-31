@@ -12,7 +12,7 @@ class CoinsData {
 
     async dataTake(currectPage) {
         try {
-            const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&per_page=12&page=${currectPage}&x_cg_demo_api_key=CG-7RkMX3moi38DckTXKB8DJXY8`);
+            const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&per_page=12&page=${currectPage.page}&x_cg_demo_api_key=CG-7RkMX3moi38DckTXKB8DJXY8`);
             if (!response.ok) {
                 throw new Error('Failed to fetch data');
             }

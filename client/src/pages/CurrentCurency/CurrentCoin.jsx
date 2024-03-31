@@ -5,6 +5,7 @@ import styles from "./CurrentCoin.module.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { CiStar } from "react-icons/ci";
 import Loader from "../../shared/Loader/Loader";
+import CoinPriceChart from "./CoinPriceChart";
 
 const CurrentCoin = ({ setIsModal }) => {
     const [coinData, setCoinData] = useState(null);
@@ -68,6 +69,9 @@ const CurrentCoin = ({ setIsModal }) => {
                             </div>
                         </div>
                         <div className={styles.coinStats}>
+                            <CoinPriceChart findId={id}/>
+                        </div>
+                        <div className={styles.NoneField} style={{width:"0px", height:"100px", marginTop:"40px"}}>
 
                         </div>
                     </div>

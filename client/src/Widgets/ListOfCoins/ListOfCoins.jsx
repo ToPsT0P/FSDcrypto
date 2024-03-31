@@ -13,7 +13,6 @@ const ListOfCoins = ({paginationFlag, currectPage}) => {
       const array = new CoinsData();
       await array.dataTake(currectPage);
       setCoinsArray(array.coinsArray);
-      console.log(array.coinsArray);
     };
     fetchData();
     

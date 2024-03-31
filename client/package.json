@@ -13,6 +13,7 @@
     "@types/axios": "^0.14.0",
     "@vscode/codicons": "^0.0.35",
     "axios": "^1.6.8",
+    "chart.js": "^2.7.3",
     "css.gg": "^2.1.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
